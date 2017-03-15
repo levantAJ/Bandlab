@@ -20,12 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="evd-eZ-ibG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XiT-Fr-rDm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XiT-Fr-rDm" firstAttribute="leading" secondItem="evd-eZ-ibG" secondAttribute="leading" id="CiU-64-MZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XiT-Fr-rDm" secondAttribute="trailing" id="RK7-Dx-LIm"/>
+                            <constraint firstAttribute="bottom" secondItem="XiT-Fr-rDm" secondAttribute="bottom" id="hBK-7N-bfC"/>
+                            <constraint firstItem="XiT-Fr-rDm" firstAttribute="top" secondItem="evd-eZ-ibG" secondAttribute="top" id="kr0-HQ-xfd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XiT-Fr-rDm" id="XTn-SH-OCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1Z-v5-IVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="54"/>
+            <point key="canvasLocation" x="-314.39999999999998" y="53.523238380809602"/>
         </scene>
     </scenes>
 </document>

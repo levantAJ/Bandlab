@@ -9,8 +9,22 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+}
+
+//MARK: -Privates
+
+extension MainViewController {
+    fileprivate func setupViews() {
+        
     }
 }
