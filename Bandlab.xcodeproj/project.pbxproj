@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		618391FC1E7981B300C40ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618391FB1E7981B300C40ED7 /* AppDelegate.swift */; };
+		618392111E7981B300C40ED7 /* BandlabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392101E7981B300C40ED7 /* BandlabTests.swift */; };
+		6183921C1E7981B300C40ED7 /* BandlabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183921B1E7981B300C40ED7 /* BandlabUITests.swift */; };
+		6183922F1E7984DE00C40ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6183922C1E7984DE00C40ED7 /* Assets.xcassets */; };
+		618392331E79852700C40ED7 /* BaseServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392321E79852700C40ED7 /* BaseServiceApi.swift */; };
+		618392351E7988E200C40ED7 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392341E7988E200C40ED7 /* Song.swift */; };
+		618392371E79890000C40ED7 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392361E79890000C40ED7 /* Author.swift */; };
+		618392391E79892D00C40ED7 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392381E79892D00C40ED7 /* Picture.swift */; };
+		6183923C1E798AFD00C40ED7 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183923B1E798AFD00C40ED7 /* Mappable.swift */; };
+		6183923E1E79993400C40ED7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183923D1E79993400C40ED7 /* Date.swift */; };
+		618392401E79999D00C40ED7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183923F1E79999D00C40ED7 /* String.swift */; };
+		618392421E79A00400C40ED7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392411E79A00400C40ED7 /* Error.swift */; };
+		618392451E79A09E00C40ED7 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392441E79A09E00C40ED7 /* AppConstant.swift */; };
+		618392471E79A0EC00C40ED7 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392461E79A0EC00C40ED7 /* LocalizedString.swift */; };
+		618392491E79A20000C40ED7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618392481E79A20000C40ED7 /* Launch Screen.storyboard */; };
+		6183924E1E79A26C00C40ED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183924D1E79A26C00C40ED7 /* MainViewController.swift */; };
+		618392501E79A2C200C40ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6183924F1E79A2C200C40ED7 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6183920D1E7981B300C40ED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618391F01E7981B200C40ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618391F71E7981B200C40ED7;
+			remoteInfo = Bandlab;
+		};
+		618392181E7981B300C40ED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618391F01E7981B200C40ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618391F71E7981B200C40ED7;
+			remoteInfo = Bandlab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		618391F81E7981B300C40ED7 /* Bandlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		618391FB1E7981B300C40ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		618392071E7981B300C40ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6183920C1E7981B300C40ED7 /* BandlabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandlabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		618392101E7981B300C40ED7 /* BandlabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandlabTests.swift; sourceTree = "<group>"; };
+		618392121E7981B300C40ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		618392171E7981B300C40ED7 /* BandlabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandlabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6183921B1E7981B300C40ED7 /* BandlabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandlabUITests.swift; sourceTree = "<group>"; };
+		6183921D1E7981B300C40ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6183922C1E7984DE00C40ED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		618392321E79852700C40ED7 /* BaseServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceApi.swift; sourceTree = "<group>"; };
+		618392341E7988E200C40ED7 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		618392361E79890000C40ED7 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		618392381E79892D00C40ED7 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		6183923B1E798AFD00C40ED7 /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		6183923D1E79993400C40ED7 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		6183923F1E79999D00C40ED7 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		618392411E79A00400C40ED7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		618392441E79A09E00C40ED7 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		618392461E79A0EC00C40ED7 /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		618392481E79A20000C40ED7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6183924D1E79A26C00C40ED7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6183924F1E79A2C200C40ED7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		618391F51E7981B200C40ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618392091E7981B300C40ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618392141E7981B300C40ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		618391EF1E7981B200C40ED7 = {
+			isa = PBXGroup;
+			children = (
+				618391FA1E7981B300C40ED7 /* Bandlab */,
+				6183920F1E7981B300C40ED7 /* BandlabTests */,
+				6183921A1E7981B300C40ED7 /* BandlabUITests */,
+				618391F91E7981B300C40ED7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		618391F91E7981B300C40ED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				618391F81E7981B300C40ED7 /* Bandlab.app */,
+				6183920C1E7981B300C40ED7 /* BandlabTests.xctest */,
+				618392171E7981B300C40ED7 /* BandlabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		618391FA1E7981B300C40ED7 /* Bandlab */ = {
+			isa = PBXGroup;
+			children = (
+				618392291E7984DE00C40ED7 /* Engine */,
+				6183922D1E7984DE00C40ED7 /* Storyboard */,
+				6183922A1E7984DE00C40ED7 /* Model */,
+				6183922E1E7984DE00C40ED7 /* View */,
+				6183922B1E7984DE00C40ED7 /* Resource */,
+				618391FB1E7981B300C40ED7 /* AppDelegate.swift */,
+				618392071E7981B300C40ED7 /* Info.plist */,
+			);
+			path = Bandlab;
+			sourceTree = "<group>";
+		};
+		6183920F1E7981B300C40ED7 /* BandlabTests */ = {
+			isa = PBXGroup;
+			children = (
+				618392101E7981B300C40ED7 /* BandlabTests.swift */,
+				618392121E7981B300C40ED7 /* Info.plist */,
+			);
+			path = BandlabTests;
+			sourceTree = "<group>";
+		};
+		6183921A1E7981B300C40ED7 /* BandlabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6183921B1E7981B300C40ED7 /* BandlabUITests.swift */,
+				6183921D1E7981B300C40ED7 /* Info.plist */,
+			);
+			path = BandlabUITests;
+			sourceTree = "<group>";
+		};
+		618392291E7984DE00C40ED7 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				618392431E79A09500C40ED7 /* Constant */,
+				618392311E79850400C40ED7 /* Extension */,
+				618392301E7984F900C40ED7 /* Service */,
+				6183923A1E798AB400C40ED7 /* Utility */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		6183922A1E7984DE00C40ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				618392381E79892D00C40ED7 /* Picture.swift */,
+				618392361E79890000C40ED7 /* Author.swift */,
+				618392341E7988E200C40ED7 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6183922B1E7984DE00C40ED7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6183922C1E7984DE00C40ED7 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6183922D1E7984DE00C40ED7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				618392481E79A20000C40ED7 /* Launch Screen.storyboard */,
+				6183924F1E79A2C200C40ED7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6183922E1E7984DE00C40ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6183924C1E79A26300C40ED7 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		618392301E7984F900C40ED7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				618392321E79852700C40ED7 /* BaseServiceApi.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		618392311E79850400C40ED7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6183923D1E79993400C40ED7 /* Date.swift */,
+				6183923F1E79999D00C40ED7 /* String.swift */,
+				618392411E79A00400C40ED7 /* Error.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6183923A1E798AB400C40ED7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6183923B1E798AFD00C40ED7 /* Mappable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		618392431E79A09500C40ED7 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				618392441E79A09E00C40ED7 /* AppConstant.swift */,
+				618392461E79A0EC00C40ED7 /* LocalizedString.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		6183924C1E79A26300C40ED7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6183924D1E79A26C00C40ED7 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		618391F71E7981B200C40ED7 /* Bandlab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618392201E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "Bandlab" */;
+			buildPhases = (
+				618391F41E7981B200C40ED7 /* Sources */,
+				618391F51E7981B200C40ED7 /* Frameworks */,
+				618391F61E7981B200C40ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bandlab;
+			productName = Bandlab;
+			productReference = 618391F81E7981B300C40ED7 /* Bandlab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6183920B1E7981B300C40ED7 /* BandlabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618392231E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabTests" */;
+			buildPhases = (
+				618392081E7981B300C40ED7 /* Sources */,
+				618392091E7981B300C40ED7 /* Frameworks */,
+				6183920A1E7981B300C40ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6183920E1E7981B300C40ED7 /* PBXTargetDependency */,
+			);
+			name = BandlabTests;
+			productName = BandlabTests;
+			productReference = 6183920C1E7981B300C40ED7 /* BandlabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		618392161E7981B300C40ED7 /* BandlabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618392261E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabUITests" */;
+			buildPhases = (
+				618392131E7981B300C40ED7 /* Sources */,
+				618392141E7981B300C40ED7 /* Frameworks */,
+				618392151E7981B300C40ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				618392191E7981B300C40ED7 /* PBXTargetDependency */,
+			);
+			name = BandlabUITests;
+			productName = BandlabUITests;
+			productReference = 618392171E7981B300C40ED7 /* BandlabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		618391F01E7981B200C40ED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = levantAJ;
+				TargetAttributes = {
+					618391F71E7981B200C40ED7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					6183920B1E7981B300C40ED7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 618391F71E7981B200C40ED7;
+					};
+					618392161E7981B300C40ED7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 618391F71E7981B200C40ED7;
+					};
+				};
+			};
+			buildConfigurationList = 618391F31E7981B200C40ED7 /* Build configuration list for PBXProject "Bandlab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 618391EF1E7981B200C40ED7;
+			productRefGroup = 618391F91E7981B300C40ED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				618391F71E7981B200C40ED7 /* Bandlab */,
+				6183920B1E7981B300C40ED7 /* BandlabTests */,
+				618392161E7981B300C40ED7 /* BandlabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		618391F61E7981B200C40ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618392501E79A2C200C40ED7 /* Main.storyboard in Resources */,
+				618392491E79A20000C40ED7 /* Launch Screen.storyboard in Resources */,
+				6183922F1E7984DE00C40ED7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6183920A1E7981B300C40ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618392151E7981B300C40ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		618391F41E7981B200C40ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618392371E79890000C40ED7 /* Author.swift in Sources */,
+				6183923C1E798AFD00C40ED7 /* Mappable.swift in Sources */,
+				618392471E79A0EC00C40ED7 /* LocalizedString.swift in Sources */,
+				6183924E1E79A26C00C40ED7 /* MainViewController.swift in Sources */,
+				6183923E1E79993400C40ED7 /* Date.swift in Sources */,
+				618392351E7988E200C40ED7 /* Song.swift in Sources */,
+				618391FC1E7981B300C40ED7 /* AppDelegate.swift in Sources */,
+				618392331E79852700C40ED7 /* BaseServiceApi.swift in Sources */,
+				618392401E79999D00C40ED7 /* String.swift in Sources */,
+				618392421E79A00400C40ED7 /* Error.swift in Sources */,
+				618392451E79A09E00C40ED7 /* AppConstant.swift in Sources */,
+				618392391E79892D00C40ED7 /* Picture.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618392081E7981B300C40ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618392111E7981B300C40ED7 /* BandlabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618392131E7981B300C40ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6183921C1E7981B300C40ED7 /* BandlabUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6183920E1E7981B300C40ED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618391F71E7981B200C40ED7 /* Bandlab */;
+			targetProxy = 6183920D1E7981B300C40ED7 /* PBXContainerItemProxy */;
+		};
+		618392191E7981B300C40ED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618391F71E7981B200C40ED7 /* Bandlab */;
+			targetProxy = 618392181E7981B300C40ED7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6183921E1E7981B300C40ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6183921F1E7981B300C40ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		618392211E7981B300C40ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bandlab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.Bandlab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		618392221E7981B300C40ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bandlab/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.Bandlab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		618392241E7981B300C40ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BandlabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bandlab.app/Bandlab";
+			};
+			name = Debug;
+		};
+		618392251E7981B300C40ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BandlabTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bandlab.app/Bandlab";
+			};
+			name = Release;
+		};
+		618392271E7981B300C40ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BandlabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bandlab;
+			};
+			name = Debug;
+		};
+		618392281E7981B300C40ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BandlabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bandlab;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		618391F31E7981B200C40ED7 /* Build configuration list for PBXProject "Bandlab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6183921E1E7981B300C40ED7 /* Debug */,
+				6183921F1E7981B300C40ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618392201E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "Bandlab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618392211E7981B300C40ED7 /* Debug */,
+				618392221E7981B300C40ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		618392231E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618392241E7981B300C40ED7 /* Debug */,
+				618392251E7981B300C40ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		618392261E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618392271E7981B300C40ED7 /* Debug */,
+				618392281E7981B300C40ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 618391F01E7981B200C40ED7 /* Project object */;
+}
