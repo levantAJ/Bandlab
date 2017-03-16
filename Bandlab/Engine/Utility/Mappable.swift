@@ -79,12 +79,12 @@ final class Mapper<T: Mappable> {
         return map(json: json)
     }
     
-    func map(json: [[String: Any]]) -> [T] {
-        return json.flatMap { map(json: $0) }
+    func map(jsonArray: [[String: Any]]) -> [T] {
+        return jsonArray.flatMap { map(json: $0) }
     }
     
-    func map(json: Any) -> [T]? {
-        guard let json = json as? [[String: Any]] else { return nil }
-        return map(json: json)
+    func map(jsonObject: Any) -> [T]? {
+        guard let json = jsonObject as? [[String: Any]] else { return nil }
+        return map(jsonArray: json)
     }
 }

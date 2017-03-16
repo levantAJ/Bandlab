@@ -13,7 +13,7 @@ struct Author: Mappable {
     init() {}
     
     mutating func mapping(map: Map) {
-        name = map.string(name)
+        name = map.string("name")
         picture = map.object("picture")
     }
 }

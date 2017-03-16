@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61370DD71E7AD93300E158EB /* AuthorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61370DD61E7AD93300E158EB /* AuthorTests.swift */; };
+		61370DD91E7AD95900E158EB /* author.json in Resources */ = {isa = PBXBuildFile; fileRef = 61370DD81E7AD95900E158EB /* author.json */; };
+		61370DDD1E7ADA0900E158EB /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 61370DDC1E7ADA0900E158EB /* songs.json */; };
+		61370DDF1E7ADB0700E158EB /* SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61370DDE1E7ADB0700E158EB /* SongTests.swift */; };
+		61370DE31E7ADF0200E158EB /* MappableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61370DE21E7ADF0200E158EB /* MappableTests.swift */; };
+		615B325C1E7AD6D700AEB1C5 /* PictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B325B1E7AD6D700AEB1C5 /* PictureTests.swift */; };
+		615B325E1E7AD72800AEB1C5 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B325D1E7AD72800AEB1C5 /* XCTestCase.swift */; };
+		615B32611E7AD75900AEB1C5 /* picture.json in Resources */ = {isa = PBXBuildFile; fileRef = 615B32601E7AD75900AEB1C5 /* picture.json */; };
 		618391FC1E7981B300C40ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618391FB1E7981B300C40ED7 /* AppDelegate.swift */; };
-		618392111E7981B300C40ED7 /* BandlabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392101E7981B300C40ED7 /* BandlabTests.swift */; };
 		6183921C1E7981B300C40ED7 /* BandlabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6183921B1E7981B300C40ED7 /* BandlabUITests.swift */; };
 		6183922F1E7984DE00C40ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6183922C1E7984DE00C40ED7 /* Assets.xcassets */; };
 		618392331E79852700C40ED7 /* BaseServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618392321E79852700C40ED7 /* BaseServiceApi.swift */; };
@@ -46,11 +53,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61370DD61E7AD93300E158EB /* AuthorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTests.swift; sourceTree = "<group>"; };
+		61370DD81E7AD95900E158EB /* author.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = author.json; sourceTree = "<group>"; };
+		61370DDC1E7ADA0900E158EB /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
+		61370DDE1E7ADB0700E158EB /* SongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTests.swift; sourceTree = "<group>"; };
+		61370DE21E7ADF0200E158EB /* MappableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableTests.swift; sourceTree = "<group>"; };
+		615B325B1E7AD6D700AEB1C5 /* PictureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureTests.swift; sourceTree = "<group>"; };
+		615B325D1E7AD72800AEB1C5 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		615B32601E7AD75900AEB1C5 /* picture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = picture.json; sourceTree = "<group>"; };
 		618391F81E7981B300C40ED7 /* Bandlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618391FB1E7981B300C40ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618392071E7981B300C40ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6183920C1E7981B300C40ED7 /* BandlabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandlabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		618392101E7981B300C40ED7 /* BandlabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandlabTests.swift; sourceTree = "<group>"; };
 		618392121E7981B300C40ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618392171E7981B300C40ED7 /* BandlabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandlabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6183921B1E7981B300C40ED7 /* BandlabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandlabUITests.swift; sourceTree = "<group>"; };
@@ -98,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		615B325F1E7AD74B00AEB1C5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				615B32601E7AD75900AEB1C5 /* picture.json */,
+				61370DD81E7AD95900E158EB /* author.json */,
+				61370DDC1E7ADA0900E158EB /* songs.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		618391EF1E7981B200C40ED7 = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +159,13 @@
 		6183920F1E7981B300C40ED7 /* BandlabTests */ = {
 			isa = PBXGroup;
 			children = (
-				618392101E7981B300C40ED7 /* BandlabTests.swift */,
 				618392121E7981B300C40ED7 /* Info.plist */,
+				61370DE21E7ADF0200E158EB /* MappableTests.swift */,
+				615B325B1E7AD6D700AEB1C5 /* PictureTests.swift */,
+				61370DD61E7AD93300E158EB /* AuthorTests.swift */,
+				61370DDE1E7ADB0700E158EB /* SongTests.swift */,
+				615B325D1E7AD72800AEB1C5 /* XCTestCase.swift */,
+				615B325F1E7AD74B00AEB1C5 /* Resource */,
 			);
 			path = BandlabTests;
 			sourceTree = "<group>";
@@ -313,6 +342,7 @@
 					};
 					6183920B1E7981B300C40ED7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 618391F71E7981B200C40ED7;
 					};
@@ -359,6 +389,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61370DD91E7AD95900E158EB /* author.json in Resources */,
+				61370DDD1E7ADA0900E158EB /* songs.json in Resources */,
+				615B32611E7AD75900AEB1C5 /* picture.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618392111E7981B300C40ED7 /* BandlabTests.swift in Sources */,
+				61370DDF1E7ADB0700E158EB /* SongTests.swift in Sources */,
+				615B325E1E7AD72800AEB1C5 /* XCTestCase.swift in Sources */,
+				615B325C1E7AD6D700AEB1C5 /* PictureTests.swift in Sources */,
+				61370DE31E7ADF0200E158EB /* MappableTests.swift in Sources */,
+				61370DD71E7AD93300E158EB /* AuthorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,10 +581,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BandlabTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bandlab.app/Bandlab";
 			};
@@ -558,10 +598,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BandlabTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.BandlabTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bandlab.app/Bandlab";
 			};
@@ -612,6 +654,7 @@
 				618392221E7981B300C40ED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		618392231E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabTests" */ = {
 			isa = XCConfigurationList;
@@ -620,6 +663,7 @@
 				618392251E7981B300C40ED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		618392261E7981B300C40ED7 /* Build configuration list for PBXNativeTarget "BandlabUITests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +672,7 @@
 				618392281E7981B300C40ED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

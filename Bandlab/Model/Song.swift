@@ -24,6 +24,7 @@ struct Song: Mappable {
         name = map.string("name")
         author = map.object("author")
         createdOn = map.date("createdOn", format: "yyyy-MM-dd'T'HH:mm:ssZ")
+        modifiedOn = map.date("modifiedOn", format: "yyyy-MM-dd'T'HH:mm:ssZ")
         picture = map.object("picture")
         audioLink = map.url("audioLink")
     }

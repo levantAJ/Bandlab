@@ -35,7 +35,7 @@ final class BaseServiceApi {
             case .failure(let error):
                 completion?(.failure(error))
             case .success(let json):
-                if let objects: [T] = Mapper<T>().map(json: json) {
+                if let objects: [T] = Mapper<T>().map(jsonObject: json) {
                     completion?(.success(objects))
                 } else {
                     let error = NSError.error(description: Constant.LocalizedString.CannotMappingObject)
