@@ -72,17 +72,23 @@ extension BaseServiceApi {
     fileprivate func request(url: URL, completion: ((Response<Any>) -> Void)? = nil) {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
-                completion?(.failure(error))
+                DispatchQueue.main.async {
+                    completion?(.failure(error))
+                }
             }
             else if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    completion?(.success(json))
+                    DispatchQueue.main.async {
+                        completion?(.success(json))
+                    }
                 }
                 catch let error {
-                    completion?(.failure(error))
+                    DispatchQueue.main.async {
+                        completion?(.failure(error))
+                    }
                 }
             }
-        }.resume()
+            }.resume()
     }
 }
