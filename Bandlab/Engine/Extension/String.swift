@@ -9,10 +9,6 @@
 import Foundation
 
 extension String {
-    var ISO8601Date: Date? {
-        return ISO8601DateFormatter().date(from: self)
-    }
-    
     func date(format: String) -> Date? {
         let dateFormat: DateFormatter = DateFormatter()
         dateFormat.dateFormat = format

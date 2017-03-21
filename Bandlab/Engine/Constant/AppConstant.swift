@@ -8,4 +8,14 @@
 
 //This will handle every localized string in app
 
+import UIKit
+
 struct Constant {}
+
+extension Notification.Name {
+    static let AudioDidPlay = Notification.Name("com.levantAJ.Bandlab.audio.did-play")
+    static let AudioDidPause = Notification.Name("com.levantAJ.Bandlab.audio.did-pause")
+    static let AudioTimeDidChange = Notification.Name("com.levantAJ.Bandlab.audio.time-did-change")
+    static let AudioTimeDidReachToEnd = Notification.Name("com.levantAJ.Bandlab.audio.did-reach-to-end")
+    static let AudioTimeReadyToPlay = Notification.Name("com.levantAJ.Bandlab.audio.ready-to-play")
+}

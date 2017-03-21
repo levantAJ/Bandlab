@@ -29,3 +29,11 @@ struct Song: Mappable {
         audioLink = map.url("audioLink")
     }
 }
+
+//MARK: -Equatable
+
+extension Song: Equatable {
+    public static func ==(lhs: Song, rhs: Song) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

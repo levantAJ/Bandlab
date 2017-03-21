@@ -38,7 +38,7 @@ final class DateTests: XCTestCase {
         date = Date().addingTimeInterval(-172800)
         XCTAssertEqual(date.timeAgo, date.dateAndTime)
     }
-    
+     
     func testDateAndTime() {
         let formater = DateFormatter()
         formater.dateFormat = "yyyy/MM/dd hh:mm"

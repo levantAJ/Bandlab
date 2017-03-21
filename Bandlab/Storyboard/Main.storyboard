@@ -25,16 +25,89 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YC0-Gb-jhh" userLabel="Playing Wrapper View">
+                                <rect key="frame" x="0.0" y="667" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjk-xz-EiZ" userLabel="Play Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FLZ-f3-ZAx"/>
+                                        </constraints>
+                                        <state key="normal" image="play-item"/>
+                                        <connections>
+                                            <action selector="playButtonTappedWithButton:" destination="uO4-pK-wHa" eventType="touchUpInside" id="m1h-dj-gjf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2x-08-e4G" userLabel="More Button">
+                                        <rect key="frame" x="335" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FQh-Ox-AhZ"/>
+                                        </constraints>
+                                        <state key="normal" image="more"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-xJ-c0f" userLabel="Song Name Label">
+                                        <rect key="frame" x="40" y="4" width="295" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC5-gA-r84" userLabel="Author Label">
+                                        <rect key="frame" x="40" y="21" width="295" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="PRy-3L-EaM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7m-Hv-eCb" userLabel="Top Line View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.82745098039215681" green="0.86274509803921573" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ddf-6G-0cq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="w7m-Hv-eCb" firstAttribute="leading" secondItem="YC0-Gb-jhh" secondAttribute="leading" id="1VB-Kv-isc"/>
+                                    <constraint firstItem="w7m-Hv-eCb" firstAttribute="top" secondItem="YC0-Gb-jhh" secondAttribute="top" id="9HH-s7-8iW"/>
+                                    <constraint firstItem="l2x-08-e4G" firstAttribute="leading" secondItem="PC5-gA-r84" secondAttribute="trailing" id="APC-Zx-4a3"/>
+                                    <constraint firstItem="wjk-xz-EiZ" firstAttribute="leading" secondItem="YC0-Gb-jhh" secondAttribute="leading" id="BuM-aJ-tlS"/>
+                                    <constraint firstItem="lnJ-xJ-c0f" firstAttribute="leading" secondItem="wjk-xz-EiZ" secondAttribute="trailing" id="I2r-Jz-biu"/>
+                                    <constraint firstItem="l2x-08-e4G" firstAttribute="top" secondItem="YC0-Gb-jhh" secondAttribute="top" id="NxK-22-jiq"/>
+                                    <constraint firstItem="wjk-xz-EiZ" firstAttribute="top" secondItem="YC0-Gb-jhh" secondAttribute="top" id="PF6-f8-duI"/>
+                                    <constraint firstAttribute="trailing" secondItem="w7m-Hv-eCb" secondAttribute="trailing" id="WaG-YG-5Hx"/>
+                                    <constraint firstAttribute="bottom" secondItem="wjk-xz-EiZ" secondAttribute="bottom" id="YGo-ij-27c"/>
+                                    <constraint firstItem="PC5-gA-r84" firstAttribute="leading" secondItem="wjk-xz-EiZ" secondAttribute="trailing" id="ZZY-aN-8rg"/>
+                                    <constraint firstAttribute="bottom" secondItem="PC5-gA-r84" secondAttribute="bottom" constant="4" id="mjj-hJ-SXf"/>
+                                    <constraint firstItem="l2x-08-e4G" firstAttribute="leading" secondItem="lnJ-xJ-c0f" secondAttribute="trailing" id="pmp-QT-cQx"/>
+                                    <constraint firstAttribute="height" constant="40" id="rKH-J5-fVH"/>
+                                    <constraint firstItem="lnJ-xJ-c0f" firstAttribute="top" secondItem="YC0-Gb-jhh" secondAttribute="top" constant="4" id="tJ0-Kj-FOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="l2x-08-e4G" secondAttribute="trailing" id="tpc-JH-p6N"/>
+                                    <constraint firstAttribute="bottom" secondItem="l2x-08-e4G" secondAttribute="bottom" id="u5o-Mb-ZXx"/>
+                                    <constraint firstItem="PC5-gA-r84" firstAttribute="top" secondItem="lnJ-xJ-c0f" secondAttribute="bottom" id="ulf-Wn-OGz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YC0-Gb-jhh" firstAttribute="leading" secondItem="evd-eZ-ibG" secondAttribute="leading" id="4YO-Kz-rW8"/>
                             <constraint firstItem="XiT-Fr-rDm" firstAttribute="leading" secondItem="evd-eZ-ibG" secondAttribute="leading" id="CiU-64-MZQ"/>
                             <constraint firstAttribute="trailing" secondItem="XiT-Fr-rDm" secondAttribute="trailing" id="RK7-Dx-LIm"/>
-                            <constraint firstAttribute="bottom" secondItem="XiT-Fr-rDm" secondAttribute="bottom" id="hBK-7N-bfC"/>
+                            <constraint firstAttribute="trailing" secondItem="YC0-Gb-jhh" secondAttribute="trailing" id="UTi-Wu-reO"/>
+                            <constraint firstItem="YC0-Gb-jhh" firstAttribute="top" secondItem="XiT-Fr-rDm" secondAttribute="bottom" id="dbx-ac-VJg"/>
+                            <constraint firstAttribute="bottom" secondItem="YC0-Gb-jhh" secondAttribute="bottom" constant="-40" id="fmG-c0-b1v"/>
                             <constraint firstItem="XiT-Fr-rDm" firstAttribute="top" secondItem="evd-eZ-ibG" secondAttribute="top" id="kr0-HQ-xfd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="PC5-gA-r84" id="JaO-pi-eRh"/>
+                        <outlet property="moreButton" destination="l2x-08-e4G" id="VqH-0Z-4yi"/>
+                        <outlet property="playButton" destination="wjk-xz-EiZ" id="Oh5-V2-9fL"/>
+                        <outlet property="playingWrapperView" destination="YC0-Gb-jhh" id="two-ya-rB6"/>
+                        <outlet property="playingWrapperViewBottomConstraint" destination="fmG-c0-b1v" id="CTK-fl-6BT"/>
+                        <outlet property="songNameLabel" destination="lnJ-xJ-c0f" id="aGP-ax-nvW"/>
                         <outlet property="tableView" destination="XiT-Fr-rDm" id="XTn-SH-OCm"/>
                     </connections>
                 </viewController>
@@ -43,4 +116,8 @@
             <point key="canvasLocation" x="-314.39999999999998" y="53.523238380809602"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="more" width="13" height="3"/>
+        <image name="play-item" width="17" height="20"/>
+    </resources>
 </document>

@@ -19,16 +19,23 @@ final class SongTableViewCellModel {
 //MARK: -SongTableViewCellProtocol
 
 extension SongTableViewCellModel: SongTableViewCellProtocol {
+    internal func durationTime(completion: @escaping (String) -> Void) {
+        AudioPlayer.durationFor(song: song) { (duration) in
+            completion(duration.toDurationStringFromSeconds(showHour: false))
+        }
+    }
+
     internal var creationTime: String {
         return song.createdOn.timeAgo
     }
 
     internal var playingTime: String {
-        return "00:00 / 00:00" //TODO: 
+        return AudioPlayer.currentTime(song: song).toDurationStringFromSeconds(showHour: false)
     }
 
     internal var isPlaying: Bool {
-        return false //TODO:
+        let playing: Bool = AudioPlayer.checkIsPlaying(song: song)
+        return playing
     }
 
     internal var authorName: String {
