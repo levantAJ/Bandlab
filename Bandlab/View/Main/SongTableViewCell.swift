@@ -9,8 +9,9 @@
 import UIKit
 
 protocol SongTableViewCellProtocol {
+    var songId: Int { get }
     var coverImageURL: URL { get }
-    var name: String { get }
+    var songName: String { get }
     var authorAvatarURL: URL { get }
     var authorName: String { get }
     var isPlaying: Bool { get }
@@ -20,8 +21,8 @@ protocol SongTableViewCellProtocol {
 }
 
 protocol SongTableViewCellDelegate: class {
-    func songTableViewCell(_ cell: SongTableViewCell, play song: SongTableViewCellModel)
-    func songTableViewCell(_ cell: SongTableViewCell, pause song: SongTableViewCellModel)
+    func songTableViewCell(_ cell: SongTableViewCell, play song: Song)
+    func songTableViewCell(_ cell: SongTableViewCell, pause song: Song)
 }
 
 final class SongTableViewCell: UITableViewCell {
@@ -38,7 +39,7 @@ final class SongTableViewCell: UITableViewCell {
     
     weak var delegate: SongTableViewCellDelegate?
     
-    fileprivate var song: SongTableViewCellModel!
+    fileprivate var song: SongTableViewCellProtocol!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,11 +54,11 @@ final class SongTableViewCell: UITableViewCell {
 //MARK: -Getters & Setters
 
 extension SongTableViewCell {
-    func set<T: SongTableViewCellModel>(song: T) where T: SongTableViewCellProtocol {
+    func set(song: SongTableViewCellProtocol) {
         self.song = song
         DispatchQueue(label: "com.levantAJ.Bandlab.queue.load-song-cell").async { [weak self] in
             let coverImageURL: URL = song.coverImageURL
-            let name: String = song.name
+            let name: String = song.songName
             let authorAvatarURL: URL = song.authorAvatarURL
             let authorName: String = song.authorName
             let isPlaying: Bool = song.isPlaying
@@ -86,9 +87,9 @@ extension SongTableViewCell {
 extension SongTableViewCell {
     @IBAction func playButtonTapped(button: UIButton) {
         if song.isPlaying {
-            delegate?.songTableViewCell(self, pause: song)
+            delegate?.songTableViewCell(self, pause: song as! Song)
         } else {
-            delegate?.songTableViewCell(self, play: song)
+            delegate?.songTableViewCell(self, play: song as! Song)
         }
     }
 }
@@ -102,18 +103,18 @@ extension SongTableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(audioDidPlay(_:)), name: .AudioDidPlay, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(audioDidPause(_:)), name: .AudioDidPause, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(audioTimeDidChange(_:)), name: .AudioTimeDidChange, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(audioDidReachToEnd(_:)), name: .AudioTimeDidReachToEnd, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(audioDidReachToEnd(_:)), name: .AudioDidReachToEnd, object: nil)
     }
     
     @objc fileprivate func audioDidPlay(_ notification: Notification) {
-        guard (notification.object as? Song)?.id == song.song.id else { return }
+        guard (notification.object as? Song)?.id == song.songId else { return }
         DispatchQueue.main.async { [weak self] in
             self?.playButton.setImage(.pause, for: .normal)
         }
     }
     
     @objc fileprivate func audioDidPause(_ notification: Notification) {
-        guard (notification.object as? Song)?.id == song.song.id else { return }
+        guard (notification.object as? Song)?.id == song.songId else { return }
         DispatchQueue.main.async { [weak self] in
             self?.playButton.setImage(.play, for: .normal)
         }
@@ -122,7 +123,7 @@ extension SongTableViewCell {
     @objc fileprivate func audioTimeDidChange(_ notification: Notification) {
         guard let object = notification.object as? [String: Any?],
             let currentSong = object["currentSong"] as? Song,
-            currentSong == song.song else { return }
+            currentSong.id == song.songId else { return }
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else { return }
             self.playingTimeLabel.text = self.song.playingTime
@@ -130,7 +131,7 @@ extension SongTableViewCell {
     }
     
     @objc fileprivate func audioDidReachToEnd(_ notification: Notification) {
-        guard (notification.object as? Song)?.id == song.song.id else { return }
+        guard (notification.object as? Song)?.id == song.songId else { return }
         DispatchQueue.main.async { [weak self] in
             self?.playButton.setImage(.play, for: .normal)
         }

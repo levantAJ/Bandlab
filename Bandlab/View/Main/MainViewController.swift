@@ -12,12 +12,13 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var playingWrapperView: UIView!
     @IBOutlet weak var playingWrapperViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var playingWrapperViewTapGestureRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
     
-    fileprivate var songs: [SongTableViewCellModel] = []
+    fileprivate var songs: [Song] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,12 @@ final class MainViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToFullPlayer" {
+            (segue.destination as! FullPlayerViewController).songs = songs
+        }
     }
     
     deinit {
@@ -46,7 +53,7 @@ extension MainViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(audioDidPlay(_:)), name: .AudioDidPlay, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(audioDidPause(_:)), name: .AudioDidPause, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(audioDidReachToEnd(_:)), name: .AudioTimeDidReachToEnd, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(audioDidReachToEnd(_:)), name: .AudioDidReachToEnd, object: nil)
     }
     
     fileprivate func fetchSongs() {
@@ -55,7 +62,7 @@ extension MainViewController {
             case .failure(let error):
                 self?.show(error: error)
             case .success(let songs):
-                self?.songs = songs.map { SongTableViewCellModel(song: $0) }
+                self?.songs = songs
                 self?.tableView.reloadData()
             }
         }
@@ -106,13 +113,13 @@ extension MainViewController: UITableViewDataSource {
 //MARK: -SongTableViewCellDelegate
 
 extension MainViewController: SongTableViewCellDelegate {
-    internal func songTableViewCell(_ cell: SongTableViewCell, play song: SongTableViewCellModel) {
+    internal func songTableViewCell(_ cell: SongTableViewCell, play song: Song) {
         AudioPlayer.shared.pause()
-        AudioPlayer.shared.set(song: song.song)
+        AudioPlayer.shared.set(song: song)
         AudioPlayer.shared.play()
     }
     
-    internal func songTableViewCell(_ cell: SongTableViewCell, pause song: SongTableViewCellModel) {
+    internal func songTableViewCell(_ cell: SongTableViewCell, pause song: Song) {
         AudioPlayer.shared.pause()
     }
 }
@@ -126,5 +133,9 @@ extension MainViewController {
         } else {
             AudioPlayer.shared.play()
         }
+    }
+    
+    @IBAction func playingWrapperViewTapGestureRecognizerTapped(sender: Any) {
+        performSegue(withIdentifier: "ToFullPlayer", sender: nil)
     }
 }

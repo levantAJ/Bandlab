@@ -13,4 +13,6 @@ extension UIImage {
     @nonobjc static let pauseItem: UIImage = UIImage(named: "pause-item")!
     @nonobjc static let play: UIImage = UIImage(named: "play")!
     @nonobjc static let pause: UIImage = UIImage(named: "pause")!
+    @nonobjc static let playerPlay: UIImage = UIImage(named: "player-play")!
+    @nonobjc static let playerPause: UIImage = UIImage(named: "player-pause")!
 }

@@ -37,3 +37,47 @@ extension Song: Equatable {
         return lhs.id == rhs.id
     }
 }
+
+
+//MARK: -SongTableViewCellProtocol
+
+extension Song: SongTableViewCellProtocol {
+    internal var songId: Int {
+        return id
+    }
+    
+    internal func durationTime(completion: @escaping (String) -> Void) {
+        AudioPlayer.durationFor(song: self) { (duration) in
+            completion(duration.toDurationStringFromSeconds(showHour: false))
+        }
+    }
+    
+    internal var creationTime: String {
+        return createdOn.timeAgo
+    }
+    
+    internal var playingTime: String {
+        return AudioPlayer.currentTimeFor(song: self).toDurationStringFromSeconds(showHour: false)
+    }
+    
+    internal var isPlaying: Bool {
+        let playing: Bool = AudioPlayer.checkIsPlaying(song: self)
+        return playing
+    }
+    
+    internal var authorName: String {
+        return author.name
+    }
+    
+    internal var authorAvatarURL: URL {
+        return author.picture.s
+    }
+    
+    internal var songName: String {
+        return name
+    }
+    
+    internal var coverImageURL: URL {
+        return picture.m
+    }
+}
