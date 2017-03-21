@@ -18,4 +18,19 @@ final class ArrayTests: XCTestCase {
         array.replace(6)
         XCTAssertEqual(array, [1, 2, 3, 4, 5, 6])
     }
+    
+    func testRemove() {
+        var array: [Int] = [1, 2, 3, 4, 5]
+        array.remove(1)
+        XCTAssertEqual(array, [2, 3, 4, 5])
+        
+        array.remove(4)
+        XCTAssertEqual(array, [2, 3, 5])
+        
+        array.remove(5)
+        XCTAssertEqual(array, [2, 3])
+        
+        array.remove(1)
+        XCTAssertEqual(array, [2, 3])
+    }
 }
