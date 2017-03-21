@@ -126,7 +126,11 @@ extension FullPlayerViewController {
     
     private func updateCurrentTime() {
         playingTimeLabel.text = AudioPlayer.shared.currentTime.toDurationStringFromSeconds()
-        playingSlider.value = AudioPlayer.shared.progress
+        playingSlider.setValue(AudioPlayer.shared.progress, animated: true)
+        let duration: Double = AudioPlayer.shared.durationTime
+        durationTimeLabel.text = duration.toDurationStringFromSeconds()
+        playingSlider.isEnabled = duration != 0
+        loadingView.isHidden = !AudioPlayer.shared.isBuffering
     }
     
     private func update(song: Song) {
@@ -137,7 +141,6 @@ extension FullPlayerViewController {
         songAuthorLabel.text = song.author.name
         playButton.setImage(AudioPlayer.shared.isPlaying ? .playerPause: .playerPlay, for: .normal)
         nextButton.isEnabled = song != songs.last
-        loadingView.isHidden = AudioPlayer.shared.isBuffering
         updateCurrentTime()
     }
     
@@ -145,6 +148,7 @@ extension FullPlayerViewController {
         if let index = songs.index(of: song),
             index + 1 < songs.count {
             AudioPlayer.shared.set(song: songs[index + 1])
+            AudioPlayer.shared.seek(to: kCMTimeZero)
             AudioPlayer.shared.play()
         }
     }
@@ -178,5 +182,12 @@ extension FullPlayerViewController {
         }
         AudioPlayer.shared.seek(to: kCMTimeZero)
         AudioPlayer.shared.play()
+    }
+    
+    @IBAction func playingSliderValueChanged(slider: UISlider) {
+        let durationTime: Double = AudioPlayer.shared.durationTime
+        let progress: Double = Double(playingSlider.value)
+        let seekTime: CMTime = CMTimeMake(Int64(progress * durationTime * 1000), 1000) //Avoid time too small, so multiple with 1000
+        AudioPlayer.shared.seek(to: seekTime)
     }
 }

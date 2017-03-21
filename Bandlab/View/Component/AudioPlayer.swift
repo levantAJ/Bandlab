@@ -13,13 +13,15 @@ final class AudioPlayer: NSObject {
     
     fileprivate(set) var currentSong: Song?
     fileprivate(set) var isBuffering: Bool = false
-    fileprivate lazy var cache: NSCache = NSCache<NSString, AVPlayerItem>()
-    fileprivate lazy var player: AVPlayer = AVPlayer()
+    fileprivate lazy var cache: NSCache = NSCache<NSString, AVPlayerItem>() //Cache every loaded `AVPlayerItem`, no need to refetch data when play again
+    fileprivate lazy var player: AVPlayer = AVPlayer() //Using only `AVPlayer`'s instance for whole app, avoid create to many player, it leading crash
     fileprivate var periodicTimeObserver: Any!
     
     override init() {
         super.init()
-        let interval: CMTime = CMTime(seconds: 1, preferredTimescale: Int32(NSEC_PER_SEC))
+        
+        //Observe time did change for player, 0.25 make animations be smoother
+        let interval: CMTime = CMTime(seconds: 0.25, preferredTimescale: Int32(NSEC_PER_SEC))
         periodicTimeObserver = player.addPeriodicTimeObserver(forInterval: interval, queue: .main, using: { [weak self] (time) in
             NotificationCenter.default.post(name: .AudioTimeDidChange, object: self?.currentSong)
         })
@@ -73,7 +75,7 @@ extension AudioPlayer {
     }
     
     var progress: Float {
-        let duration: Double = player.currentItem?.duration.seconds ?? 0
+        let duration: Double = durationTime
         guard duration != 0 else { return 0 }
         let currentTime: Double = player.currentTime().seconds
         return Float(currentTime / duration)
@@ -81,6 +83,10 @@ extension AudioPlayer {
     
     var currentTime: Double {
         return player.currentTime().seconds
+    }
+    
+    var durationTime: Double {
+        return player.currentItem?.duration.seconds ?? 0
     }
     
     func set(song: Song) {
@@ -157,7 +163,7 @@ extension AudioPlayer {
 
 extension AudioPlayer {
     fileprivate func keyFrom(song: Song) -> NSString {
-        return String(song.id) as NSString
+        return String(song.id) as NSString //Not `String` because we are using `NSCache`
     }
     
     @objc fileprivate func didReachToEnd(_ notification: Notification) {

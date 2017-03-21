@@ -9,6 +9,7 @@
 import Foundation
 
 extension Constant {
+    //Localize all string in app
     struct LocalizedString {
         static let CannotMappingObject = NSLocalizedString("Cannot mapping object!", comment: "")
         static let Unspecified = NSLocalizedString("Unspecified", comment: "")

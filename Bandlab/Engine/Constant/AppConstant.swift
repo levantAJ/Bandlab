@@ -10,6 +10,7 @@
 
 import UIKit
 
+//Group all constants in app
 struct Constant {}
 
 extension Notification.Name {
@@ -23,5 +24,4 @@ extension Notification.Name {
     static let AudioPlaybackBufferEmpty = Notification.Name("com.levantAJ.Bandlab.audio.playback-buffer-empty")
     static let AudioPlaybackBufferFull = Notification.Name("com.levantAJ.Bandlab.audio.playback-buffer-full")
     static let AudioPlaybackLikelyToKeepUp = Notification.Name("com.levantAJ.Bandlab.audio.playback-likely-to-keep-up")
-    
 }

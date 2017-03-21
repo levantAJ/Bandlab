@@ -157,7 +157,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzC-94-QUV" userLabel="Dismiss Button">
-                                            <rect key="frame" x="331" y="9" width="44" height="44"/>
+                                            <rect key="frame" x="323" y="9" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="WS3-SO-7WF"/>
                                                 <constraint firstAttribute="width" constant="44" id="sV0-AF-gSi"/>
@@ -250,6 +250,9 @@
                                                     <subviews>
                                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-9X-1bF" userLabel="Playing Slider">
                                                             <rect key="frame" x="-2" y="0.5" width="339" height="31"/>
+                                                            <connections>
+                                                                <action selector="playingSliderValueChangedWithSlider:" destination="DP4-Oo-Xs1" eventType="valueChanged" id="Qz6-Mf-FBL"/>
+                                                            </connections>
                                                         </slider>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -292,7 +295,7 @@
                                         <constraint firstItem="s3J-Q1-lsg" firstAttribute="leading" secondItem="hZI-K9-fe8" secondAttribute="leading" constant="20" id="rPe-zc-pHS"/>
                                         <constraint firstItem="lgZ-IZ-oXr" firstAttribute="centerY" secondItem="Nzz-CV-Xtf" secondAttribute="centerY" id="sn5-Vd-UBU"/>
                                         <constraint firstItem="L5s-1w-avr" firstAttribute="top" secondItem="hZI-K9-fe8" secondAttribute="top" constant="22" id="tWl-JY-oUX"/>
-                                        <constraint firstAttribute="trailing" secondItem="PzC-94-QUV" secondAttribute="trailing" id="uYk-qf-b4a"/>
+                                        <constraint firstAttribute="trailing" secondItem="PzC-94-QUV" secondAttribute="trailing" constant="8" id="uYk-qf-b4a"/>
                                         <constraint firstItem="qnZ-GE-X9S" firstAttribute="top" secondItem="qwv-FK-Njw" secondAttribute="bottom" constant="30" id="x7W-EG-gwM"/>
                                         <constraint firstItem="WKI-7e-6i7" firstAttribute="leading" secondItem="hZI-K9-fe8" secondAttribute="leading" constant="20" id="zgr-6K-XVG"/>
                                     </constraints>
